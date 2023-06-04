@@ -7,39 +7,22 @@
 */
 
 // Task: Add code here
-class BaseSignal {
-    constructor() {
-        if (new.target === BaseSignal) {
-            throw new Error("Not Allowed");
-        }
-    }
-    send() {
-        console.log(`Sending ${this.getType()} signal`);
-    }
-    getType() {
-        const className = this.constructor.name;
-        const signalIndex = className.indexOf("Signal");
-        return className.substring(0, signalIndex).toLowerCase();
-    }
-}
+
 class TvSignal extends BaseSignal {
     constructor(){
         // Add code here
-        super();
     }
 }
 
 class AirconSignal extends BaseSignal {
     constructor(){
         // Add code here
-        super();
     }
 }
 
 class DoorSignal extends BaseSignal {
     constructor(){
         // Add code here
-        super();
     }
 }
 
